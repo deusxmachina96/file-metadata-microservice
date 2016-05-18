@@ -1,7 +1,6 @@
 var express = require('express');
 var multer = require('multer');
 var upload = multer({
-  dest: '/uploads/',
   limits: { fileSize: 10 * 1024 * 1024 }
 });
 var router = express.Router();
