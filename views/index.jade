@@ -3,8 +3,10 @@ extends layout
 block content
   h1 File Metadata Service
   p Upload a file to see it's size. Max 10MB.
-  form(action="/upload", method="post", enctype="multipart/form-data")
+  form(action="/upload", id='dataForm' method="post", enctype="multipart/form-data")
     input(type="file", name="userFile", id="fileInput")
     input(type='submit', value="upload")
+
+  span(hidden) You cannot upload files larger than 10MB.
 
   script(src=scriptsSrc)

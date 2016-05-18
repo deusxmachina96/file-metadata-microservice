@@ -11,7 +11,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/upload', upload.single('userFile'), function(req, res, next){
-  console.log(req.file);
   res.json({"size": req.file.size});
 });
 
